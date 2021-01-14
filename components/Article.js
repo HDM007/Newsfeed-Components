@@ -87,6 +87,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: "Harry Strikes Back",
+    date: "11:33PM Wed Jan 13",
+    firstParagraph: "Let's",
+    secondParagraph: "Get",
+    thirdParagraph: "Jiggy"
   }
 ];
 
@@ -130,6 +137,22 @@ function articleMaker(item){
   article.classList.add("article");
   date.classList.add("date");
   expandButton.classList.add("expandButton")
+
+  title.textContent = item.title
+  date.textContent = item.date
+  firstP.textContent = item.firstParagraph
+  secondP.textContent = item.secondParagraph
+  thirdP.textContent = item.thirdParagraph
+  expandButton.textContent = "Read More"
+
+
+  article.appendChild(title);
+  article.appendChild(date);
+  article.appendChild(firstP);
+  article.appendChild(secondP);
+  article.appendChild(thirdP);
+  article.appendChild(expandButton);
+
 
   expandButton.addEventListener("click", (event) => {
     article.classList.add("article-open")
